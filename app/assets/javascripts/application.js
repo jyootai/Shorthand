@@ -12,7 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require semantic-ui
+//= require turbolinks
 //= require vendor
 //= require_tree .
+
+$(function(){
+  jQuery('#datetimepicker').datetimepicker();
+});

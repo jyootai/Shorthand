@@ -1,3 +1,31 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.homes-page{
+  background-color:#f7f7f7;
+  .ui.grid{
+    margin:0;
+  }
+  .ui.form{
+    width:90%;
+  }
+  .ui.label{
+    max-width:85px;
+  }
+  .nine.wide.column{
+    background-color:#fff;
+    border:1px solid #DDDDDD;
+  }
+  label{
+    color:#7F8081 !important;
+  }
+  textarea{
+    height:22em !important;
+  }
+  .describe{
+    h1{
+      color:#7F8081;
+    }
+  }
+  .form-input input{
+    padding-right:none !important;
+  }
+}
+
