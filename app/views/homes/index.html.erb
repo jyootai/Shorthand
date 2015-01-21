@@ -4,7 +4,7 @@
       <div class="describe">
         <h1>Shorthand —— 记一切所看所感所闻之事</h1>
       </div>
-      <%=form_for :note, url: notes_path, html: { class: "ui form"} do |f| %>
+      <%=form_for @note, url: notes_path, html: { class: "ui form"} do |f| %>
         <div class="field">
           <div class="ui icon input">
             <%=f.text_field :time_at,:placeholder=>"挑一个记事时间",:id=>"datetimepicker"%>

@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119143927) do
+ActiveRecord::Schema.define(version: 20150121112541) do
 
   create_table "notes", force: :cascade do |t|
     t.text     "body",       limit: 65535
     t.datetime "time_at"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "username",   limit: 255
+    t.integer  "note_id",    limit: 4
   end
 
 end
