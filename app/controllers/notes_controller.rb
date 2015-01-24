@@ -14,6 +14,11 @@ class NotesController < ApplicationController
   end
 
   def show
+    @note = Note.find_by_note_id(params[:note_id])
+  end
+
+  def user
+    @notes =Note.where("username = ?", params[:username])
   end
 
   private
