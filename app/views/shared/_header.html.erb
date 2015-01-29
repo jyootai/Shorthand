@@ -7,10 +7,12 @@
       </div>
     </div>
     <div class="item">
-      <div class="ui action input">
-        <input type="text" placeholder="Navigate to...">
-        <div class="ui button">Go</div>
-      </div>
+      <%=form_for :note_search, url: search_path,method: :get do |f|%>
+        <div class="ui action input">
+          <%= f.text_field :query, placeholder: "Search..."%>
+          <div class="ui button">Go</div>
+        </div>
+      <%end%>
     </div>
     <div class="center item">
       <i class="write square icon"></i>
