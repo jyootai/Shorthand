@@ -1,20 +1,14 @@
 <div class="ui menu">
   <div class="container">
-    <div class="right item">
-      <div class="ui icon input">
-        <input type="text" placeholder="Search...">
-        <i class="search icon"></i>
-      </div>
-    </div>
     <div class="item">
       <%=form_for :note_search, url: search_path,method: :get do |f|%>
-        <div class="ui action input">
-          <%= f.text_field :query, placeholder: "Search..."%>
-          <div class="ui button">Go</div>
+        <div class="ui icon input">
+          <%= f.text_field :query, placeholder: "搜索用户名，如 user1"%>
+          <i class="search icon"></i>
         </div>
       <%end%>
     </div>
-    <div class="center item">
+    <div class="right item">
       <a href="/">
         <i class="write square icon"></i>
       </a>
