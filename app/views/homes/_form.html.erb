@@ -1,0 +1,29 @@
+<div class="describe">
+  <h1>Shorthand —— 记一切所看所感所闻之事</h1>
+</div>
+<%=form_for @note, url: notes_path, html: { class: "ui form"} do |f| %>
+  <div class="field">
+    <div class="ui icon input">
+      <%=f.text_field :time_at,:placeholder=>"挑一个记事时间",:id=>"datetimepicker"%>
+      <i class="calendar icon"></i>
+    </div>
+  </div>
+  <div class="field">
+    <label>这里填写内容</label>
+    <%=f.text_area :body, :placeholder=>"你可以在这里详细的描述......"%>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <div class="ui labeled input">
+        <div class="ui label">http://localhost:3000/</div>
+        <%=f.text_field :username, :placeholder=>"英文名如 user1"%>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.text_field :note_id,:placeholder=>"填一个查看地址ID，如 1"%>
+    </div>
+  </div>
+  <div class="field">
+    <%=f.submit "保 存",class: "fluid ui button green"%>
+  </div>
+<%end%>  

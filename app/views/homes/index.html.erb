@@ -1,58 +1,10 @@
 <div class="home">
   <div class="ui grid">
     <div class="nine wide column">
-      <div class="describe">
-        <h1>Shorthand —— 记一切所看所感所闻之事</h1>
-      </div>
-      <%=form_for @note, url: notes_path, html: { class: "ui form"} do |f| %>
-        <div class="field">
-          <div class="ui icon input">
-            <%=f.text_field :time_at,:placeholder=>"挑一个记事时间",:id=>"datetimepicker"%>
-            <i class="calendar icon"></i>
-          </div>
-        </div>
-        <div class="field">
-          <label>这里填写内容</label>
-          <%=f.text_area :body, :placeholder=>"你可以在这里详细的描述......"%>
-        </div>
-        <div class="two fields">
-          <div class="field">
-            <div class="ui labeled input">
-              <div class="ui label">http://localhost:3000/</div>
-              <%=f.text_field :username, :placeholder=>"英文名如 user1"%>
-            </div>
-          </div>
-          <div class="field">
-            <%= f.text_field :note_id,:placeholder=>"填一个查看地址ID，如 1"%>
-          </div>
-        </div>
-        <div class="field">
-          <%=f.submit "保 存",class: "fluid ui button green"%>
-        </div>
-      <%end%>  
+      <%=render 'form'%>
     </div>
     <div class="six wide  column">
-      <div class="ui positive message">
-        <div class="header">
-          为什么选择Shorthand?
-        </div>
-        <ul class="list">
-          <li>操作简单、界面简洁.</li>
-          <li>无须注册与登录，为你去除繁琐的功能.</li>
-          <li>注重内容的书写与展示.</li>
-        </ul>
-      </div>
-      <div class="ui positive message">
-        <div class="header">
-          操作说明：
-        </div>
-        <ul class="list">
-          <li>选择一个本次记事的时间点.</li>
-          <li>查看地址最好填写一个你喜欢且易记的英文名字加数字如: user1/1.</li>
-          <li>本次的记录你将会在 http://localhost:3000/user1/1 地址看到.</li>
-          <li>每次的记事的英文名字最好相同，这样你的所有记事将会在类似 http://localhost:3000/user1 这样的地址查看.</li>
-        </ul>
-      </div>
+      <%=render 'slider'%>
     </div>
   </div>
 </div>
