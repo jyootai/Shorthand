@@ -9,7 +9,7 @@ class NotesController < ApplicationController
       @note_id = @note.note_id
       redirect_to note_path(@username,@note_id)
     else
-      render "homes/index"
+      render template: "homes/index"
     end
   end
 
