@@ -19,3 +19,6 @@
 $(function(){
   jQuery('#datetimepicker').datetimepicker();
 });
+$(window).bind('page:change',function(){
+  jQuery('#datetimepicker').datetimepicker();
+});
